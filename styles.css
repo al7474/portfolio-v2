@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Reset básico */
+/* Basic reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +8,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Diseño General */
+/* Ensure the body and html take up the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Design */
 body {
   background-color: #000000;
   color: white;
   text-align: center;
-  padding-top: 80px; /* Añadir espacio para el header fijo */
+  padding-top: 80px; /* Add space for the fixed header */
 }
 
 /* Navbar */
@@ -29,27 +37,27 @@ header {
   margin-bottom: 50px;
   position: fixed;
   top: 0;
-  width: 70%; /* Ajustar el ancho para que se mantenga dentro de los márgenes */
-  z-index: 1000; /* Asegurarse de que el header esté por encima de otros elementos */
+  width: 70%; /* Adjust the width to stay within the margins */
+  z-index: 1000; /* Ensure the header is above other elements */
 }
 
 header h1 {
   font-family: "Playfair Display SC", serif;
-  font-weight: 400; /* Aplicar la fuente al texto "I'M SHASHA" */
+  font-weight: 400; /* Apply the font to the "I'M SHASHA" text */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 100px; /* Aumentar el espacio entre los elementos del nav */
-  /* margin-left: -200px; Mover los elementos del nav a la izquierda */
+  gap: 100px; /* Increase the space between nav items */
+  /* margin-left: -200px; Move the nav items to the left */
 }
 
 nav a {
   color: white;
   text-decoration: none;
   padding: 10px;
-  font-family: "Gilda Display", serif; /* Aplicar la fuente Gilda Display a los enlaces del nav */
+  font-family: "Gilda Display", serif; /* Apply the Gilda Display font to nav links */
 }
 
 nav a:hover {
@@ -62,13 +70,14 @@ nav a:hover {
 main {
   margin-right: 15%;
   margin-left: 15%;
+  flex: 1;
 }
 
 .parent {
   display: grid;
   grid-template-columns: 2fr repeat(2, 1.2fr) 1.3fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px; /* Añadir espacio entre los elementos de la cuadrícula */
+  gap: 20px; /* Add space between grid items */
   height: 70vh;
   margin-top: 5%;
 }
@@ -114,6 +123,9 @@ main {
 footer {
   margin-top: 50px;
   padding: 20px;
-  background-color: #0e0e0f;
+  background-color: #000000;
   opacity: 0.5;
+  text-align: center;
+
+  padding: 10px;
 }
