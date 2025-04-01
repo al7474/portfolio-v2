@@ -9,7 +9,8 @@
 }
 
 /* Ensure the body and html take up the full height */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
@@ -21,43 +22,45 @@ body {
   background-color: #000000;
   color: white;
   text-align: center;
-  padding-top: 80px; /* Add space for the fixed header */
+  
 }
 
 /* Navbar */
 header {
+  padding: 105px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1920px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  position: fixed;
-  top: 0;
-  width: 70%; /* Adjust the width to stay within the margins */
+  top: 0; /* Fix it to the top of the page */
   z-index: 1000; /* Ensure the header is above other elements */
+}
+
+header nav {
+  display: flex;
+  gap: 100px; /* Space between navigation items */
 }
 
 header h1 {
   font-family: "Playfair Display SC", serif;
-  font-weight: 400; /* Apply the font to the "I'M SHASHA" text */
+  font-weight: 400;
+  font-size: 3rem;
+  margin-right: auto; /* Push the title to the left */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 100px; /* Increase the space between nav items */
-  /* margin-left: -200px; Move the nav items to the left */
+  gap: 20px; /* Space between nav items */
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 10px;
-  font-family: "Gilda Display", serif; /* Apply the Gilda Display font to nav links */
+  padding: 10px 15px;
+  font-family: "Gilda Display", serif;
 }
 
 nav a:hover {
@@ -68,22 +71,21 @@ nav a:hover {
 /* Main sections */
 
 main {
-  margin-right: 15%;
-  margin-left: 15%;
-  flex: 1;
+ 
 }
 
+/* Parent grid container */
 .parent {
   display: grid;
-  grid-template-columns: 2fr repeat(2, 1.2fr) 1.3fr;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px; /* Add space between grid items */
-  height: 70vh;
-  margin-top: 5%;
+  grid-template-columns: 480px 400px 400px 360px;
+  grid-template-rows: 400px 400px;
+  gap: 20px; /* Space between grid items */
+  justify-content: center; /* Center the grid horizontally */
+  align-content: center; /* Center the grid vertically */
 }
 
 .div1 {
-  grid-area: 1 / 1 / 3 / 2;
+  grid-area: 1 / 1 / 3 / 1;
   background-color: #0e0e0f;
   border-radius: 30px;
 }
@@ -95,28 +97,34 @@ main {
   transform: scaleX(-1);
 }
 .div2 {
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 1/ 4;
   background-color: #0e0e0f;
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 30px;
+  padding: 20px;
 }
 .div3 {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 2 / 2 / 2 / 2;
   background-color: #0e0e0f;
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 30px;
+  padding: 20px;
 }
+
 .div4 {
-  grid-area: 2 / 3 / 3 / 4;
+  grid-area: 2 / 3 / 2 / 4;
   background-color: #0e0e0f;
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 30px;
+  padding: 20px;
 }
+
 .div5 {
   grid-area: 1 / 4 / 3 / 5;
   background-color: #0e0e0f;
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 30px;
+  padding: 20px;
 }
 
 /* Footer */
@@ -126,6 +134,5 @@ footer {
   background-color: #000000;
   opacity: 0.5;
   text-align: center;
-
   padding: 10px;
 }
